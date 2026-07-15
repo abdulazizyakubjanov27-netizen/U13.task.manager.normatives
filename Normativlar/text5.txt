@@ -1,0 +1,107 @@
+5-normativ
+"""
+📝
+ 5-Normativ — DRF ViewSet’da Search, Filter va Pagination
+🕒
+ Bajarish uchun ajratilgan vaqt: 90 min
+🔧
+ Mavzu: SearchFilter, OrderingFilter, Pagination
+🎯
+ Maqsad:
+• DRF’da search qo‘shish
+• Filter qilish (query params orqali)
+• Pagination qo‘shish
+• Bularni ModelViewSet ichida ishlatish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Post API (ModelViewSet) ga quyidagilarni qo‘shing:
+1) Search
+2) Filter
+3) Pagination
+Hammasi ViewSet ichida ishlashi kerak.-----------------------------------------------------------
+�
+�
+ 1-bosqich: Search qo‘shish
+Post bo‘yicha qidiruv qo‘shing.
+15
+DRF normativ
+Qidiriladigan fieldlar:
+• title
+• content
+Query:
+/api/posts/?search=django
+Natija:
+faqat mos postlar chiqadi-----------------------------------------------------------
+�
+�
+ 2-bosqich: Filter qo‘shish
+Postlarni filter qilish:
+Masalan:
+• created_at
+• yoki boshqa fieldlar
+Query:
+/api/posts/?created_at=2024
+yoki:
+/api/posts/?title=hello-----------------------------------------------------------
+DRF normativ
+16
+📌
+ 3-bosqich: Ordering qo‘shish
+Postlarni tartiblash:
+/api/posts/?ordering=created_at
+/api/posts/?ordering=-created_at-----------------------------------------------------------
+�
+�
+ 4-bosqich: Pagination qo‘shish
+Har sahifada 5 yoki 10 ta post chiqsin.
+Query:
+/api/posts/?page=2-----------------------------------------------------------
+�
+�
+ 5-bosqich: settings.py sozlash
+Pagination uchun:
+DEFAULT_PAGINATION_CLASS
+PAGE_SIZE-----------------------------------------------------------
+�
+�
+ 6-bosqich: ViewSet ichida sozlash
+ModelViewSet ichida:
+• filter_backends
+• search_fields
+• ordering_fields
+DRF normativ
+17
+ishlatiladi
+-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• Search ishlayapti
+• Filter ishlayapti
+• Ordering ishlayapti
+• Pagination ishlayapti
+• Hammasi ViewSet ichida ishlayapti-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/api/posts/
+/api/posts/?search=django
+/api/posts/?page=2
+/api/posts/?ordering=-created_at-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-5: Search, Filter, Pagination qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+• Search ishlayapti
+• Filter ishlayapti
+DRF normativ
+18
+• Pagination ishlayapti
+• ViewSet ichida sozlangan
+• Query params to‘g‘ri ishlayapti
+"""

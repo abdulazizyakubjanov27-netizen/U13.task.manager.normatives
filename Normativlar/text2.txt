@@ -1,0 +1,110 @@
+2-normativ
+"""
+📝
+ 2-Normativ — Serializer, Validator va APIView (CRUD)
+🕒
+ Bajarish uchun ajratilgan vaqt: 90 min
+🔧
+ Mavzu: ModelSerializer, validation, APIView, CRUD
+🎯
+ Maqsad:
+2
+DRF normativ
+• DRF Serializer bilan ishlash
+• ModelSerializer yozish
+• Custom validation yozish
+• APIView orqali CRUD qilish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Post model uchun to‘liq API yozing:
+• Serializer
+• Validation
+• CRUD (APIView orqali)-----------------------------------------------------------
+�
+�
+ 1-bosqich: Serializer yaratish
+serializers.py fayl yarating.
+PostSerializer yozing:
+• ModelSerializer ishlating
+• fields = '__all__'-----------------------------------------------------------
+�
+�
+ 2-bosqich: Validation qo‘shish
+Serializer ichida validation yozing:
+1) title bo‘sh bo‘lmasin
+2) content kamida 10 ta belgidan iborat bo‘lsin
+DRF normativ
+3
+validate() yoki validate_field orqali yozish mumkin.
+-----------------------------------------------------------
+�
+�
+ 3-bosqich: List va Create API (APIView)
+APIView yozing:
+GET:
+• barcha postlarni JSON qaytaradi
+POST:
+• yangi post yaratadi
+• serializer orqali saqlanadi
+Endpoint:
+/api/posts/-----------------------------------------------------------
+�
+�
+ 4-bosqich: Detail API (APIView)
+APIView yozing:
+GET:
+• bitta postni qaytaradi
+PUT:
+• postni to‘liq yangilaydi
+DELETE:
+• postni o‘chiradi
+Endpoint:
+/api/posts/<id>/
+DRF normativ
+4-----------------------------------------------------------
+�
+�
+ 5-bosqich: Serializer ishlatish
+Har bir methodda:
+• serializer = PostSerializer(...)
+• serializer.is_valid()
+• serializer.save()-----------------------------------------------------------
+�
+�
+ 6-bosqich: Response qaytarish
+Har bir API JSON response qaytarsin:
+• GET → data
+• POST → yangi object
+• PUT → yangilangan object
+• DELETE → status-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• Postlarni olish mumkin
+• Yangi post qo‘shish mumkin
+• Postni tahrirlash mumkin
+• Postni o‘chirish mumkin
+• Validation ishlaydi-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/api/posts/
+/api/posts/<id>/
+DRF normativ
+5
+-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-2: Serializer va APIView CRUD qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+• ModelSerializer ishlatilgan
+• Validation ishlaydi
+• APIView orqali CRUD ishlaydi
+• JSON response to‘g‘ri
+• Kod tartibli
+"""

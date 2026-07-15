@@ -1,0 +1,47 @@
+DRF normativ
+📝 1-Normativ — DRF Setup va API
+boshlash
+"""
+📝
+ 1-Normativ — DRF Setup va birinchi API
+🕒
+ 60 min
+🔧
+ Mavzu: Django REST Framework o‘rnatish
+🎯
+ Maqsad:
+• DRF o‘rnatish
+• API asoslarini tushunish
+• JSON response qaytarish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Loyihaga Django REST Framework qo‘shing va
+birinchi API endpoint yarating.-----------------------------------------------------------
+�
+�
+ 1-bosqich:
+pip install djangorestframework-----------------------------------------------------------
+�
+�
+ 2-bosqich:
+settings.py ga qo‘shing:
+1
+DRF normativ
+'rest_framework',-----------------------------------------------------------
+�
+�
+ 3-bosqich:
+Oddiy API view yozing:
+• /api/test/
+JSON response qaytarsin:
+{
+}
+"message": "Hello DRF"-----------------------------------------------------------
+�
+�
+ Topshirish:
+Commit:
+"drf-1: DRF setup va birinchi API"
+"""
+# This is seccessfully 1-normativ  💯🎉

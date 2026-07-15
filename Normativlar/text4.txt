@@ -1,0 +1,104 @@
+4-Normativ
+"""
+📝
+ 4-Normativ — DRF Token Authentication (obtain token)
+🕒
+ Bajarish uchun ajratilgan vaqt: 90 min
+🔧
+ Mavzu: Token Authentication, obtain_auth_token
+🎯
+ Maqsad:
+• DRF’da Token Authentication ishlatish
+• User login orqali token olish
+• Token orqali API ga kirish
+• Session auth o‘rniga token auth ishlatish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Loyihaga Token Authentication qo‘shing.
+Foydalanuvchi:
+1) Login qiladi
+2) Token oladi
+11
+DRF normativ
+3) Token orqali API ga murojaat qiladi-----------------------------------------------------------
+�
+�
+ 1-bosqich: Token auth o‘rnatish
+Quyidagi paketni qo‘shing:
+'rest_framework.authtoken'-----------------------------------------------------------
+�
+�
+ 2-bosqich: Migratsiya qilish
+python manage.py migrate
+Natijada token jadvali yaratiladi.-----------------------------------------------------------
+�
+�
+ 3-bosqich: settings.py sozlash
+REST_FRAMEWORK ichida:
+'DEFAULT_AUTHENTICATION_CLASSES': [
+'rest_framework.authentication.TokenAuthentication',
+]-----------------------------------------------------------
+�
+�
+ 4-bosqich: Token olish API
+DRF built-in view ishlatiladi:
+obtain_auth_token
+DRF normativ
+12
+Endpoint:
+/api/token/
+Foydalanuvchi:
+• username
+• password
+yuboradi va token oladi.-----------------------------------------------------------
+�
+�
+ 5-bosqich: Token orqali request yuborish
+Header ichida:
+Authorization: Token <token>-----------------------------------------------------------
+�
+�
+ 6-bosqich: Permission qo‘shish
+Talab:
+• GET → ochiq
+• POST/PUT/DELETE → faqat token bilan-----------------------------------------------------------
+�
+�
+ 7-bosqich: Tekshirish
+Postman yoki DRF orqali:
+1) Token oling
+2) Header qo‘shing
+3) CRUD qiling
+DRF normativ
+13
+-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• User token oladi
+• Token orqali API ishlaydi
+• Token bo‘lmasa → 401
+• Token bilan → CRUD ishlaydi-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/api/token/
+/api/posts/
+/api/posts/<id>/-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-4: Token authentication qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+• Token auth ishlayapti
+• obtain_auth_token ishlatilgan
+• Token orqali API ishlayapti
+• Permissionlar to‘g‘ri
+DRF normativ
+14
+• 401 error to‘g‘ri chiqadi
+"""

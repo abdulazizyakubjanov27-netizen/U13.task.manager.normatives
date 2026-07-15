@@ -1,0 +1,110 @@
+10-normativ
+"""
+📝
+ 10-Normativ — DRF Throttling va Caching (Final)
+🕒
+ Bajarish uchun ajratilgan vaqt: 120 min
+🔧
+ Mavzu: Rate limiting (Throttling), Caching, Performance
+34
+DRF normativ
+�
+�
+ Maqsad:
+• API’ni ortiqcha requestlardan himoyalash (throttling)
+• API tezligini oshirish (caching)
+• Production darajadagi optimizatsiya qilish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Post API ga quyidagilarni qo‘shing:
+1) Throttling (rate limit)
+2) Caching (response caching)-----------------------------------------------------------
+�
+�
+ 1-bosqich: Throttling qo‘shish
+DRF’da throttling ishlating.
+Talab:
+• Anonymous user → kamroq limit
+• Authenticated user → ko‘proq limit-----------------------------------------------------------
+�
+�
+ 2-bosqich: settings.py sozlash
+REST_FRAMEWORK ichida:
+DEFAULT_THROTTLE_CLASSES
+DEFAULT_THROTTLE_RATES
+DRF normativ
+35
+Misol:
+• anon: 10/min
+• user: 100/min-----------------------------------------------------------
+�
+�
+ 3-bosqich: Throttle tekshirish
+Agar limit oshsa:
+→ 429 Too Many Requests chiqadi-----------------------------------------------------------
+�
+�
+ 4-bosqich: Custom throttle (ixtiyoriy)
+Custom throttle class yozish mumkin.
+Masalan:
+• faqat POST limitlash-----------------------------------------------------------
+�
+�
+ 5-bosqich: Caching qo‘shish
+Django caching ishlating.
+Cache backend:
+• LocMemCache
+yoki
+• Redis (tavsiya etiladi)
+DRF normativ
+36-----------------------------------------------------------
+�
+�
+ 6-bosqich: settings.py caching
+CACHES sozlang.-----------------------------------------------------------
+�
+�
+ 7-bosqich: ViewSet’da caching
+List API uchun:
+• response caching qo‘shing
+Talab:
+• bir xil request → cache’dan qaytsin
+• server yuk kamayadi-----------------------------------------------------------
+�
+�
+ 8-bosqich: Cache invalidation
+Agar POST/PUT/DELETE bo‘lsa:
+• cache yangilanishi kerak-----------------------------------------------------------
+�
+�
+ 9-bosqich: Test qilish
+• Ko‘p request yuboring → throttle ishlaydi
+• Bir xil GET → tez qaytadi (cache)-----------------------------------------------------------
+DRF normativ
+37
+📌
+ Kutiladigan natija:
+• API himoyalangan (rate limit bor)
+• API tez ishlayapti
+• Server yuk kamaygan
+• Cache ishlayapti-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/api/posts/-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-10: Throttling va caching qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+• Throttling ishlayapti
+• 429 error chiqyapti
+• Caching ishlayapti
+• Response tezlashgan
+• Cache invalidation bor
+• Kod production darajada
+"""

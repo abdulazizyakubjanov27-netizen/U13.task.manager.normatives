@@ -1,0 +1,113 @@
+6-normativ
+"""
+📝
+ 6-Normativ — Custom Permission, JWT Auth va Swagger
+🕒
+ Bajarish uchun ajratilgan vaqt: 120 min
+🔧
+ Mavzu: Custom Permission, JWT, API Documentation
+🎯
+ Maqsad:
+• Custom permission yozish (faqat o‘z postini boshqarish)
+• JWT authentication qo‘shish
+• Swagger orqali API hujjatlashtirish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Post API ni quyidagi darajaga olib chiqing:
+1) JWT Authentication ishlaydi
+2) Custom Permission ishlaydi
+3) Swagger orqali API ko‘rinadi-----------------------------------------------------------
+�
+�
+ 1-bosqich: JWT Authentication qo‘shish
+Quyidagi paketni o‘rnating:
+pip install djangorestframework-simplejwt
+19
+DRF normativ
+-----------------------------------------------------------
+�
+�
+ 2-bosqich: settings.py sozlash
+REST_FRAMEWORK ichida:
+DEFAULT_AUTHENTICATION_CLASSES:
+• JWTAuthentication-----------------------------------------------------------
+�
+�
+ 3-bosqich: JWT endpointlar
+URL qo‘shing:
+/api/token/
+/api/token/refresh/
+User:
+• username
+• password
+yuborib token oladi.-----------------------------------------------------------
+�
+�
+ 4-bosqich: Postni userga bog‘lash
+Post yaratishda:
+author = request.user
+DRF normativ
+20
+bo‘lishi kerak.
+-----------------------------------------------------------
+�
+�
+ 5-bosqich: Custom Permission yozish
+IsOwnerOrReadOnly klass yozing:
+Talab:
+• GET → hamma uchun ochiq
+• PUT/DELETE → faqat post egasi-----------------------------------------------------------
+�
+�
+ 6-bosqich: Permission qo‘llash
+ViewSet ichida:
+permission_classes orqali ishlating.-----------------------------------------------------------
+�
+�
+ 7-bosqich: Swagger qo‘shish
+Quyidagi paketlardan biri:
+• drf-yasg
+Swagger sahifa:
+/swagger/-----------------------------------------------------------
+�
+�
+ 8-bosqich: API ni tekshirish
+DRF normativ
+21
+1) JWT token oling
+2) Swagger orqali test qiling
+3) O‘z postingizni edit qiling
+4) Boshqa user postini edit qilib ko‘ring → ruxsat yo‘q-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• JWT auth ishlayapti
+• Token orqali API ishlayapti
+• Post userga bog‘langan
+• Faqat owner edit/delete qila oladi
+• Swagger ishlayapti-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/api/token/
+/api/token/refresh/
+/api/posts/
+/swagger/-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-6: JWT, Custom Permission va Swagger qo‘shildi"-----------------------------------------------------------
+DRF normativ
+22
+✅
+ Baholash mezonlari:
+• JWT auth ishlayapti
+• Token orqali API ishlayapti
+• Custom permission to‘g‘ri ishlayapti
+• Faqat owner edit qila oladi
+• Swagger ishlayapti
+• Kod tartibli va professional
+"""

@@ -1,0 +1,100 @@
+9-normativ
+"""
+📝
+ 9-Normativ — Django Channels orqali WebSocket Chat
+🕒
+ Bajarish uchun ajratilgan vaqt: 120 min
+🔧
+ Mavzu: Django Channels, WebSocket, Real-time chat
+🎯
+ Maqsad:
+• Django’da WebSocket bilan ishlash
+• Django Channels o‘rnatish
+• Real-time chat yozish
+• Frontend + backend realtime aloqa qilish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Loyihaga oddiy chat tizimi qo‘shing:
+• Foydalanuvchilar realtime xabar yuboradi
+• Xabarlar darhol boshqa userga chiqadi-----------------------------------------------------------
+�
+�
+ 1-bosqich: Channels o‘rnatish
+pip install channels-----------------------------------------------------------
+31
+DRF normativ
+�
+�
+ 2-bosqich: settings.py sozlash
+INSTALLED_APPS ga qo‘shing:
+'channels',
+ASGI_APPLICATION ni sozlang.-----------------------------------------------------------
+�
+�
+ 3-bosqich: asgi.py yangilash
+ASGI config ichida:
+ProtocolTypeRouter ishlatiladi.-----------------------------------------------------------
+�
+�
+ 4-bosqich: Routing yozish
+routing.py fayl yarating.
+WebSocket URL:
+/ws/chat/-----------------------------------------------------------
+�
+�
+ 5-bosqich: Consumer yozish
+Consumer (ChatConsumer) yozing:
+• connect → user ulanadi
+• receive → xabar qabul qilinadi
+• send → xabar yuboriladi
+DRF normativ
+32
+-----------------------------------------------------------
+�
+�
+ 6-bosqich: Group ishlatish
+Group orqali:
+• barcha userlarga xabar yuborish-----------------------------------------------------------
+�
+�
+ 7-bosqich: Frontend (JS)
+Oddiy JS yozing:
+• WebSocket ochish
+• message yuborish
+• message qabul qilish-----------------------------------------------------------
+�
+�
+ 8-bosqich: Test qilish
+2 ta browser ochib:
+• 1 user yozadi
+• 2-user darhol ko‘radi-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• WebSocket ulanish ishlaydi
+• Xabar realtime chiqadi
+• Chat ishlayapti
+• Page refresh qilmasdan ishlaydi
+DRF normativ
+33
+-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/chat/
+/ws/chat/-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-9: WebSocket chat qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+• Channels to‘g‘ri sozlangan
+• Consumer ishlayapti
+• WebSocket ishlayapti
+• Chat realtime ishlayapti
+• Kod tushunarli
+"""

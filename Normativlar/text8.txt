@@ -1,0 +1,106 @@
+8-normativ
+"""
+📝
+ 8-Normativ — Celery, Celery Beat va Redis (Background Task
+s)
+🕒
+ Bajarish uchun ajratilgan vaqt: 120 min
+🔧
+ Mavzu: Celery, Redis, Background jobs, Scheduled tasks
+🎯
+ Maqsad:
+• Django loyihaga Celery qo‘shish
+• Redis broker sifatida ishlatish
+• Background task yozish
+• Celery Beat orqali periodik task yozish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Loyihaga background task tizimini qo‘shing:
+1) Celery sozlash
+2) Redis bilan ulash
+3) Email yoki log yuboradigan task yozish
+4) Celery Beat orqali avtomatik task ishlatish
+27
+DRF normativ
+-----------------------------------------------------------
+�
+�
+ 1-bosqich: Redis o‘rnatish
+Redis server o‘rnatilishi kerak.-----------------------------------------------------------
+�
+�
+ 2-bosqich: Celery o‘rnatish
+pip install celery redis-----------------------------------------------------------
+�
+�
+ 3-bosqich: Celery sozlash
+Loyihada celery.py fayl yarating.
+Celery instance yarating va Django bilan ulang.-----------------------------------------------------------
+�
+�
+ 4-bosqich: settings.py sozlash
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'-----------------------------------------------------------
+�
+�
+ 5-bosqich: Task yozish
+tasks.py ichida task yozing.
+DRF normativ
+28
+Misollar:
+• Email yuborish
+• Log yozish
+• Post yaratilganda background ishlash-----------------------------------------------------------
+�
+�
+ 6-bosqich: Task chaqirish
+View ichida:
+task.delay() orqali background’da ishlatish-----------------------------------------------------------
+�
+�
+ 7-bosqich: Celery ishga tushirish
+Celery worker ishga tushiring:
+celery -A config worker -l info-----------------------------------------------------------
+�
+�
+ 8-bosqich: Celery Beat qo‘shish
+pip install django-celery-beat-----------------------------------------------------------
+�
+�
+ 9-bosqich: Periodik task
+Celery Beat orqali:
+Har 1 minutda:
+DRF normativ
+29
+• eski postlarni tekshirsin-----------------------------------------------------------
+�
+�
+ 10-bosqich: Beat ishga tushirish
+celery -A config beat -l info-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• Celery ishlayapti
+• Redis broker ishlayapti
+• Task background’da ishlayapti
+• API tez ishlayapti (blocking yo‘q)
+• Celery Beat orqali task avtomatik ishlayapti-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-8: Celery, Redis va Celery Beat qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+• Redis to‘g‘ri ulangan
+• Celery worker ishlayapti
+• Task delay orqali ishlayapti
+• Celery Beat ishlayapti
+DRF normativ
+30
+• Periodik task mavjud
+• Kod tartibli va productionga yaqin
+"""

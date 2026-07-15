@@ -1,0 +1,131 @@
+3-normativ
+"""
+📝
+ 3-Normativ — ViewSet + Auth API (Register, Login, Logout)
+🕒
+ Bajarish uchun ajratilgan vaqt: 90–120 min
+🔧
+ Mavzu: ModelViewSet, Session Auth, Custom Auth API
+🎯
+ Maqsad:
+• ModelViewSet orqali CRUD qilish
+• Session Authentication ishlatish
+• Register, Login, Logout API yozish
+• API orqali foydalanuvchi autentifikatsiya qilish
+6
+DRF normativ
+-----------------------------------------------------------
+�
+�
+ Vazifa:
+Loyihaga quyidagilarni qo‘shing:
+1) Post uchun ModelViewSet CRUD
+2) Register API
+3) Login API (session orqali)
+4) Logout API-----------------------------------------------------------
+�
+�
+ 1-bosqich: ModelViewSet yozish
+Post uchun ModelViewSet yozing:
+• queryset = Post.objects.all()
+• serializer_class = PostSerializer
+CRUD avtomatik ishlaydi.-----------------------------------------------------------
+�
+�
+ 2-bosqich: Router qo‘shish
+DefaultRouter orqali:
+/api/posts/
+endpoint yarating.-----------------------------------------------------------
+DRF normativ
+7
+📌
+ 3-bosqich: Session Authentication
+settings.py ichida:
+REST_FRAMEWORK = {
+'DEFAULT_AUTHENTICATION_CLASSES': [
+]
+}-----------------------------------------------------------
+�
+�
+ 4-bosqich: Register API
+Register uchun API yozing:
+• username
+• password
+• confirm_password
+Talablar:
+• passwordlar teng bo‘lishi kerak
+• user.set_password() ishlatiladi
+• user yaratiladi
+Endpoint:
+/api/register/-----------------------------------------------------------
+�
+�
+ 5-bosqich: Login API
+Login uchun API yozing:
+• username
+• password
+DRF normativ
+8
+Talablar:
+• authenticate() ishlatiladi
+• login(request, user) ishlatiladi
+• session yaratiladi
+Endpoint:
+/api/login/-----------------------------------------------------------
+�
+�
+ 6-bosqich: Logout API
+Logout API yozing:
+• logout(request) ishlatiladi
+• session o‘chiriladi
+Endpoint:
+/api/logout/-----------------------------------------------------------
+�
+�
+ 7-bosqich: Permission qo‘shish
+Talab:
+• GET → hamma uchun ochiq
+• POST/PUT/DELETE → faqat login qilgan user-----------------------------------------------------------
+�
+�
+ 8-bosqich: Tekshirish
+DRF browsable API orqali:
+DRF normativ
+9
+• Register qiling
+• Login qiling
+• CRUD ishlating
+• Logout qiling-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• User API orqali ro‘yxatdan o‘tadi
+• Login qiladi (session yaratiladi)
+• CRUD ishlaydi
+• Logout ishlaydi
+• Login qilmagan user faqat GET qiladi-----------------------------------------------------------
+�
+�
+ URL ko‘rinishi:
+/api/posts/
+/api/posts/<id>/
+/api/register/
+/api/login/
+/api/logout/-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-3: ModelViewSet va Auth API qo‘shildi"-----------------------------------------------------------
+DRF normativ
+10
+✅
+ Baholash mezonlari:
+• ModelViewSet ishlayapti
+• Register API ishlayapti
+• Login API ishlayapti
+• Logout API ishlayapti
+• Session auth ishlayapti
+• Permissionlar to‘g‘ri
+"""

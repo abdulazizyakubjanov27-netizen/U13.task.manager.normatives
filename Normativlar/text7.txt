@@ -1,0 +1,105 @@
+7-normativ
+"""
+📝
+ 7-Normativ — Unit Test, Integration Test va Query Optimiza
+tion (N+1)
+🕒
+ Bajarish uchun ajratilgan vaqt: 120 min
+🔧
+ Mavzu: Testing (unittest / pytest), ORM optimization
+🎯
+ Maqsad:
+• API uchun unit test yozish
+• Integration test yozish
+• Django ORM’da N+1 muammosini tushunish va hal qilish-----------------------------------------------------------
+�
+�
+ Vazifa:
+Post API uchun:
+1) Unit test yozing
+2) Integration test yozing
+3) Query optimization qiling-----------------------------------------------------------
+23
+DRF normativ
+�
+�
+ 1-bosqich: Unit Test yozish
+Unit test faqat bitta funksiyani test qiladi.
+Testlar:
+• Post yaratish test
+• Serializer validation test
+• Permission test
+Talab:
+• status code tekshirish
+• response data tekshirish-----------------------------------------------------------
+�
+�
+ 2-bosqich: Integration Test
+Integration test API ni to‘liq tekshiradi.
+Testlar:
+• Register → Login → Token olish
+• Token bilan Post yaratish
+• Post olish
+• Post update qilish
+Talab:
+• API to‘liq ishlashini tekshirish-----------------------------------------------------------
+DRF normativ
+24
+📌
+ 3-bosqich: Test ishlatish
+Testlarni ishga tushiring:
+python manage.py test
+yoki pytest ishlatish mumkin.-----------------------------------------------------------
+�
+�
+ 4-bosqich: N+1 muammo tushunchasi
+Muammo:
+Har bir Post uchun alohida query ishlaydi.
+Masalan:
+Postlar + author larni olishda:
+N+1 query bo‘ladi.-----------------------------------------------------------
+�
+�
+ 5-bosqich: Muammoni aniqlash
+• Debug toolbar yoki print query orqali tekshirish
+• Juda ko‘p query ketayotganini ko‘rish-----------------------------------------------------------
+�
+�
+ 6-bosqich: N+1 muammoni yechish
+Quyidagilarni ishlating:
+• select_related (ForeignKey uchun)
+DRF normativ
+25
+• prefetch_related (ManyToMany uchun)
+Masalan:
+Post.objects.select_related('author')-----------------------------------------------------------
+�
+�
+ 7-bosqich: Optimized queryset
+ViewSet ichida:
+queryset ni optimized qilib yozing.-----------------------------------------------------------
+�
+�
+ Kutiladigan natija:
+• Unit testlar ishlaydi
+• Integration testlar ishlaydi
+• API to‘liq testdan o‘tadi
+• Querylar kamaygan
+• N+1 muammo yo‘q-----------------------------------------------------------
+�
+�
+ Topshirish:
+• GitHub repository link
+• Commit message:
+"drf-7: Testlar va query optimization qo‘shildi"-----------------------------------------------------------
+✅
+ Baholash mezonlari:
+DRF normativ
+26
+• Unit test yozilgan
+• Integration test yozilgan
+• API testdan o‘tgan
+• select_related ishlatilgan
+• Query soni kamaygan
+• Kod professional darajada
+"""
