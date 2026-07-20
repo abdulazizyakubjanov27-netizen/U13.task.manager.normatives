@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f3eece4-0966-4a0d-8b86-00f15cca35c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/U13.task.manager.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Normativlar/text9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/drivers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "abdulazizyakubjanov27-netizen"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/abdulazizyakubjanov27-netizen/U13.task.manager.normatives.git",
+    "accountId": "24d9c4d5-8419-4b4b-9ea2-50537e9a7841"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>
@@ -53,6 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.manage.executor": "Run",
