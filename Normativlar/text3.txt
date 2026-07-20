@@ -129,3 +129,5 @@ DRF normativ
 • Session auth ishlayapti
 • Permissionlar to‘g‘ri
 """
+
+3-normativ bajarildi ✅✅✅

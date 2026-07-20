@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 #     3-rd library
     'rest_framework',
     'rest_framework.authtoken',
+    'django_filters',
 
 
 ]
@@ -132,4 +133,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 2,
 }
