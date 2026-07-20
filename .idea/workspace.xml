@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f3eece4-0966-4a0d-8b86-00f15cca35c6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tasks/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Normativlar/text3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Normativlar/text3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Normativlar/text4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Normativlar/text4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Normativlar/text5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Normativlar/text5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Normativlar/text6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Normativlar/text6.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drivers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/drivers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
@@ -39,6 +44,9 @@
     "accountId": "24d9c4d5-8419-4b4b-9ea2-50537e9a7841"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>

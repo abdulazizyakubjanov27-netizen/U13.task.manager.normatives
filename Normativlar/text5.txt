@@ -105,3 +105,5 @@ DRF normativ
 • ViewSet ichida sozlangan
 • Query params to‘g‘ri ishlayapti
 """
+
+5-normativ bajarildi✅✅✅

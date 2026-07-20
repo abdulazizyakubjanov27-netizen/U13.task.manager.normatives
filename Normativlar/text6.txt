@@ -111,3 +111,5 @@ DRF normativ
 • Swagger ishlayapti
 • Kod tartibli va professional
 """
+
+6-normativ bajarildi✅✅✅

@@ -102,3 +102,5 @@ DRF normativ
 14
 • 401 error to‘g‘ri chiqadi
 """
+
+4-normativ bajarildi ✅✅✅

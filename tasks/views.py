@@ -8,6 +8,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.filters import SearchFilter, OrderingFilter
+from .permissions import IsOwnerOrReadOnly
 
 @api_view(['GET'])
 def test_api(request):
@@ -50,8 +51,12 @@ class PostDetailAPIView(APIView):
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
     filter_backends = [SearchFilter, OrderingFilter]
     search_fields = ['title', 'content']
     ordering_fields = ['created_at', 'title']
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
 

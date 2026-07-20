@@ -17,10 +17,30 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Task Manager API",
+        default_version='v1',
+        description="DRF loyihasi uchun API hujjatlari",
+    ),
+    public=True,
+    permission_classes=[permissions.AllowAny],
+)
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('task/', include('tasks.urls')),
     path('account/', include('account.urls')),
     path('api/token/', obtain_auth_token),
+    path('api/jwt/token/', TokenObtainPairView.as_view()),
+    path('api/jwt/token/refresh/', TokenRefreshView.as_view()),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
 ]
