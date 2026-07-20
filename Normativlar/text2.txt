@@ -108,3 +108,5 @@ DRF normativ
 • JSON response to‘g‘ri
 • Kod tartibli
 """
+
+2-normativ bajarildi 📌✅✅✅

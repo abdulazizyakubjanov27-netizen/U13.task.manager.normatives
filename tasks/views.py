@@ -5,6 +5,8 @@ from rest_framework import status
 from .models import Post
 from .serializers import PostSerializer
 from django.shortcuts import get_object_or_404
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 @api_view(['GET'])
 def test_api(request):
@@ -43,3 +45,9 @@ class PostDetailAPIView(APIView):
         post = get_object_or_404(Post, pk=pk)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
